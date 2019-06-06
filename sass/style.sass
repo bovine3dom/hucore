@@ -1,9 +1,15 @@
 $blue: #2077b2
 $primary: $blue
 $grey-dark: #42464c
-$family-sans-serif: "PingFangSC-Regula", "微软雅黑", "Microsoft YaHei", sans-serif
+
+@import url('https://rsms.me/inter/inter.css')
+$family-sans-serif: "Inter", sans-serif
 
 @import "node_modules/bulma/bulma"
+
+p, div
+  -moz-hyphens: auto
+  text-align: justify
 
 .container
   max-width: 800px
