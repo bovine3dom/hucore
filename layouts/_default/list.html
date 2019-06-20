@@ -10,7 +10,7 @@
         {{ partial "tags" .Params.tags }}
       {{ end }}
       <div class="content">
-        {{ .Summary | plainify | safeHTML }}
+      {{ .Summary | replaceRE `<sup.*footnote-ref.*><a href.*#fn:.*/a></sup>` "" | plainify | safeHTML }}
         {{ if .Truncated }}
         <a class="button is-link" href="{{ .Permalink }}" style="height:28px">
           Read more
